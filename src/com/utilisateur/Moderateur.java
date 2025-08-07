@@ -18,7 +18,7 @@ public class Moderateur extends Utilisateur {
         return false;
     }
 
-    public boolean supprimerCommentaires(String commentaire) {
+    public boolean supprimerCommentaire(String commentaire) {
         for(String commentaires: commentaire){
             if(commentaires.contains(commentaire)){
                 commentaire.remove(commentaires);
