@@ -10,14 +10,16 @@ public class Utilisateur {
     private final String email;
     private LocalDate dateCreation = LocalDate.now();
     private final List<Utilisateur> utilisateurs = new ArrayList<>();
-    private List<String> publication = new ArrayList<>();
-    private List<String> commentaire = new ArrayList<>();
+    private List<String> publications;
+    private List<String> commentaires;
 
-    public Utilisateur(String id, String nom, String email, LocalDate dateCreation, List<Utilisateur> utilisateurs, List<String> publication, List<String> commentaire) {
+    public Utilisateur(String id, String nom, String email, LocalDate dateCreation, List<Utilisateur> utilisateurs, List<String> publications, List<String> commentaires) {
         this.id = id;
         this.nom = nom;
         this.email = email;
         this.dateCreation = dateCreation;
+        this.publications = new ArrayList<>(publications);
+        this.commentaires = new ArrayList<>(commentaires);
     }
 
     public String getId() {
@@ -41,15 +43,15 @@ public class Utilisateur {
     }
 
     public List<String> getPublication() {
-        return publication;
+        return publications;
     }
 
     public List<String> getCommentairer() {
-        return commentaire;
+        return commentaires;
     }
 
-    public static String rechercherPublication(String motCle, List<String> publication) {
-        return publication.stream().filter(p -> p.equals(motCle)).findFirst().get();
+    public static String rechercherPublication(String motCle, List<String> publications) {
+        return publications.stream().filter(p -> p.equals(motCle)).findFirst().get();
     }
 
     public static boolean rechercherUtilisateur(String nomUtilisateur, List<String> utilisateurs) {
