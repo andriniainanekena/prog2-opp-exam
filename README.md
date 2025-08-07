@@ -1,1 +1,5 @@
-# prog2-opp-exam
+## Student Information
+
+- **Name**: ANDRINIAINA Mijoro Nekena 
+- **Student ID**: STD24143
+- **Class**: K1
