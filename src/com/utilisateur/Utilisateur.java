@@ -57,4 +57,12 @@ public class Utilisateur {
             return true;
         }
     }
+
+    public static int coumpterTotalPublication(List<String> publication) {
+        int totalPublication = 0;
+        for(int i = 0; i < publication.size(); i++) {
+            totalPublication++;
+        }
+        return totalPublication;
+    }
 }
